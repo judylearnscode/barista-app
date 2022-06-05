@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+    <title>Boba Time!</title>
+    <script src="https://kit.fontawesome.com/d60e865119.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Jost:ital@0;1&family=Macondo&family=Poppins:ital,wght@0,300;0,400;0,500;1,200&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>      
+    <main>
+      <section class="container">
+            <img src="/img/bannerr.png" alt="banner image">
+            <div class=linksHere><a href="/login">Log In</a>
+                <a href="/signup">Sign Up</a></div>
+
+            <form action="/coffeeOrderForm" method="POST" role="form">
+                <label for="">
+                    Customer Name:
+                    <input required type="text" name="customerName">
+                </label>
+                <!--                     
+                <fieldset>
+                    <legend>Date:</legend>
+                    <input type="date" placeholder="Enter date" name="date" required>
+                    Add date object for this to autofill
+                </fieldset> -->
+
+                <fieldset>
+                    <legend>Size:</legend>
+                    <label for="small">Small</label>
+                    <input required type="radio" name="size" id="small" value="Small">
+
+                    <label for="medium">Medium</label>
+                    <input type="radio" name="size" id="medium" value="Medium">
+
+                    <label for="large">Large</label>
+                    <input type="radio" name="size" id="large" value="Large">
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Flavor</legend>
+
+                    <label for="taro">Taro</label>
+                    <input required type="radio" name="beverage" id="taroTea" value="Taro">
+
+                    <label for="blackTea">Black Tea</label>
+                    <input type="radio" name="beverage" id="blackTea" value="Black Tea">
+
+                    <label for="brownSugar">Brown Sugar</label>
+                    <input type="radio" name="beverage" id="brownSugar" value="Brown Sugar">
+
+                    <label for="brownSugar">Brown Sugar</label>
+                    <input type="radio" name="beverage" id="brownSugar" value="Brown Sugar">
+                    
+                    <label for="roseMilk">Rose Milk</label>
+                    <input type="radio" name="beverage" id="roseMilk" value="Rose Milk">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Hot/Iced:</legend>
+                    <label>
+                        Hot
+                        <input required type="radio" name="temperature" value="Hot"></label>
+                    <label>
+                        Iced
+                        <input type="radio" name="temperature" value="Iced"></label>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Add-Ons</legend>
+                    <h4>Sugar Level:</h4>
+
+                    <label>
+                        No Sugar
+                        <input required type="radio" name="sugar" value="No Sugar"></label>
+                    <label>
+                        Light
+                        <input type="radio" name="sugar" value="Light"></label>
+                    <label>
+                        Regular
+                        <input type="radio" name="sugar" value="Regular"></label>
+                    <label>
+                        Extra
+                        <input type="radio" name="sugar" value="Extra"></label>
+
+                    <h4>Toppings</h4>
+                    <label>
+                        Boba
+                        <input required type="radio" name="flavor" value="Boba">
+                    </label>
+                    <label>
+                        Lychee Jelly
+                        <input type="radio" name="flavor" value="Lychee Jelly">
+                    </label>
+                    <label>
+                        Cheese Foam
+                        <input type="radio" name="flavor" value="Cheese Foam">
+                    </label>
+
+                    <h4>Milk Options</h4>
+                    <label>
+                        Whole Milk
+                        <input required type="radio" name="milkOptions" value="Whole Milk">
+                    </label>
+                    <label>
+                        Low-Fat Milk
+                        <input type="radio" name="milkOptions" value="Low-Fat Milk">
+                    </label>
+                    <label>
+                        Soy Milk
+                        <input type="radio" name="milkOptions" value="Soy Milk">
+                    </label>
+                    <label>
+                        Oat Milk
+                        <input type="radio" name="milkOptions" value="Oat Milk">
+                    </label>
+                    <label>
+                        Almond Milk
+                        <input type="radio" name="milkOptions" value="Almond Milk">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Note:</legend>
+
+                    <textarea name="note" placeholder="Note" cols="20" rows="5"></textarea>
+                </fieldset>
+                <label for="submit">
+                    <input type="submit" name="Submit" id="submit">
+                </label>
+            </form>
+        </section>
+    
+  </section>
+</main>
+ 
+<script src="main.js"></script>
+
+</body>
+</html>

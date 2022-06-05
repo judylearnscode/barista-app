@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <title>Order Up!</title>
+    <script src="https://kit.fontawesome.com/d60e865119.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Jost:ital@0;1&family=Macondo&family=Poppins:ital,wght@0,300;0,400;0,500;1,200&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="/img/bannerr.png" alt="banner image">
+  <% if (user.local.email) { %>
+    <p>
+        <!-- <strong>id</strong>: <%= user._id %><br> -->
+        <strong>Barista's Name</strong>: <%= user.local.firstName %><br><a href="/logout" class="btn btn-default btn-sm">Log Out</a>
+        <!-- <strong>email</strong>: <%= user.local.email %><br>
+        <strong>password</strong>: <%= user.local.password %> -->
+    </p>
+<% } %>
+  <section class="pendingOrders">
+
+    <h2>Pending Orders</h2>
+    <ul class="orderList">
+      <% for(var i=0; i<orders.length; i++) {
+        if(orders[i].complete === false){ %> 
+        <li id="<%= orders[i]._id %>"class="orderUp">
+          <span id="customerName"><%= orders[i].customerName %></span>
+          <span><%= orders[i].size %></span>
+          <span><%= orders[i].beverage %></span>
+          <span><%= orders[i].flavor %></span>
+          <span><%= orders[i].milkOptions %></span>
+          <span><%= orders[i].note %></span>
+          <span><i id="speak" class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+          <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+        </li>
+      <% } } %>
+  </ul>
+  </section>
+
+  <section class="completedOrders">
+    <h2>Completed Orders</h2>
+    <ul class="orderList">
+      <% for(var i=0; i<orders.length; i++) {
+        if(orders[i].complete === true){ %>
+    <li id="<%= orders[i]._id %>"class="orderUp">
+      <span id="customerName"><%= orders[i].customerName %></span>
+      <span><%= orders[i].size %></span>
+      <span><%= orders[i].beverage %></span>
+      <span><%= orders[i].flavor %></span>
+      <span><%= orders[i].milkOptions %></span>
+      <span><%= orders[i].note %></span>
+      <span><i aria-hidden="true"></i></span>
+      <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+      <span>Made by: <%= user.local.firstName %></span>
+    </li>
+    <% } } %>
+    </ul>
+  </section>
+  <script src="main.js"></script>
+</body>
+</html>
+
+

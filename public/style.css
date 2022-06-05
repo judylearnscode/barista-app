@@ -1,0 +1,65 @@
+
+body {
+    font-family: 'Jost', 'Futura', sans-serif;
+    background-color: #fce7e1;
+    text-align: center;
+}
+
+img {
+    width: 250px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h3 {
+    color: #004aad;
+}
+
+a {
+    color: #8d8af8;
+}
+
+.linksHere {
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+.baristaPage {
+    padding-top: 5%;
+}
+
+.completed{
+    text-decoration: line-through;
+  }
+
+  .pendingOrders, .completedOrders {
+      list-style: decimal;
+      text-align: left;
+      float: left;
+      width: 50%;
+      padding: 5%, 5%;
+      /* list-style-position: inside; */
+  }
+
+  .container, .loginPage {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+  }
+
+  label {
+    font-weight: 800px;
+}
+
+  fieldset, input, button, textarea {
+      border-radius: 10px;
+  }
+
